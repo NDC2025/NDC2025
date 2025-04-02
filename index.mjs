@@ -33,5 +33,4 @@ document.getElementById("btnconnexion").addEventListener("click", function () {
     const errorMessage = error.message;
     alert(errorCode, errorMessage);
   });
-  })
 })
