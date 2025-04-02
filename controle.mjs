@@ -15,7 +15,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth()
 const ft = getFirestore()
 
-equipe = await getDocs(collection(ft, "Equipe"));
+let equipe = await getDocs(collection(ft, "Equipe"));
 
 getDocs(collection(db, "cities")).forEach((doc) => {
   console.log(doc.id, " => ", doc.data());
