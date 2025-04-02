@@ -23,7 +23,7 @@ querySnapshot.forEach((doc) => {
   //consol.log(doc.id);
   //liste.appendChild(equipe);
   //document.getElementById("liste-equipe").appendChild(liste);
-  //document.getElementById("liste-equipe").appendChild(document.creatElement("li").appendChild(document.creatEkement("p").innertHTML = doc.id));
+  document.getElementById("liste-equipe").appendChild(document.creatElement("li").appendChild(document.creatEkement("p").innertHTML = doc.id));
 });
 
 
