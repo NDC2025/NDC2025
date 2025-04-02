@@ -20,7 +20,6 @@ querySnapshot.forEach((doc) => {
   let liste = document.createElement("li");
   let equipe = document.createElement("p");
   equipe.innerHTML = doc.id;
-  console.log(doc.id, equipe.innerHTML);
   liste.appendChild(equipe);
   document.getElementById("liste-equipe").appendChild(liste);
   //document.getElementById("liste-equipe").appendChild(document.creatElement("li").appendChild(document.creatEkement("p").innerHTML = doc.id));
