@@ -15,8 +15,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth()
 const db = getFirestore()
 
-let equipe = await getDocs(collection(db, "Equipe"));
-
 const querySnapshot = await getDocs(collection(db, "Equipe"));
 querySnapshot.forEach((doc) => {
   console.log(doc.id, " => ", doc.data());
