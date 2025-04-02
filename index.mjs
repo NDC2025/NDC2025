@@ -25,5 +25,7 @@ onAuthStateChanged(auth, (user) => {
 document.getElementById("btnconnexion").addEventListener("click", function () {
   const email = document.getElementById("email").innertHTML
   const passaword = document.getElementById("password").innerHTML
-  signInWithEmailAndPassword(auth, email, password)
+  signInWithEmailAndPassword(auth, email, password).catch((error) => {
+    alert(error.code, error.message)
+  })
 })
