@@ -17,7 +17,9 @@ const db = getFirestore()
 
 let equipe = await getDocs(collection(db, "Equipe"));
 
-getDocs(collection(db, "cities")).forEach((doc) => {
+const querySnapshot = await getDocs(collection(db, "Equipe"));
+querySnapshot.forEach((doc) => {
   console.log(doc.id, " => ", doc.data());
 });
+
 
