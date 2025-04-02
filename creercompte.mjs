@@ -17,7 +17,7 @@ const auth = getAuth();
 const db = getFirestore();
 
 document.getElementById("btncreer").addEventListener("click", function () {
-  const nom = document.getElementById("nom").value
+  const nom = document.getElementById("prenom").value
   const email = document.getElementById("email").value
   const password = document.getElementById("password").value
   const classe = document.getElementById("classe").value
