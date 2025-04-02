@@ -18,7 +18,8 @@ const db = getFirestore()
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    window.location.href = "controle.html";
+    //window.location.href = "controle.html";
+    pass
   }
 });
 
