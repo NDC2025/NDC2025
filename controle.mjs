@@ -21,8 +21,8 @@ querySnapshot.forEach((doc) => {
   let equipe = document.createElement("p");
   equipe.innerHTML = doc.id;
   console.log(doc.id);
-  liste.appendChild(equipe);
-  document.getElementById("liste-equipe").appendChild(liste);
+  //liste.appendChild(equipe);
+  document.getElementById("liste-equipe").appendChild(equipe);
   //document.getElementById("liste-equipe").appendChild(document.creatElement("li").appendChild(document.creatEkement("p").innerHTML = doc.id));
 });
 
