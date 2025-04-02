@@ -24,8 +24,8 @@ onAuthStateChanged(auth, (user) => {
 
 
 document.getElementById("btnconnexion").addEventListener("click", function () {
-  const email = document.getElementById("email").innertHTML;
-  const password = document.getElementById("password").innerHTML;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
   signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
     const user = userCredential.user;
     console.log(user);
