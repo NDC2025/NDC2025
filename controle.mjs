@@ -15,6 +15,11 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth()
 const db = getFirestore()
 const user = auth.currentUser;
+if (user !== null) {
+  const displayName = user.displayName;
+  const email = user.email;
+  const uid = user.uid;
+}
 
 const querySnapshot = await getDocs(collection(db, "Equipe"));
 querySnapshot.forEach((doc) => {
