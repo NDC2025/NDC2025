@@ -16,11 +16,9 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth()
 const db = getFirestore()
 
-/*
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    window.location.href = "controle.html";
-    
+    window.location.href = "controle.html"; 
   }
 });
 
@@ -40,4 +38,3 @@ document.getElementById("btnconnexion").addEventListener("click", function () {
     console.log(errorMessage);
   });
 })
-*/
