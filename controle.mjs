@@ -17,11 +17,12 @@ const db = getFirestore()
 
 const querySnapshot = await getDocs(collection(db, "Equipe"));
 querySnapshot.forEach((doc) => {
-  let liste = document.createElement("li");
-  let equipe = document.createElement("p");
-  equipe.innertHTML = doc.id;
-  liste.appendChild(equipe);
-  document.getElementById("liste-equipe").appendChild(liste);
+  //let liste = document.createElement("li");
+  //let equipe = document.createElement("p");
+  //equipe.innertHTML = doc.id;
+  //liste.appendChild(equipe);
+  //document.getElementById("liste-equipe").appendChild(liste);
+  document.getElementById("liste-equipe").appendChild(document.creatElement("li").appendChild(document.creatEkement("p").innertHTML = doc.id))
 });
 
 
