@@ -19,7 +19,7 @@ const querySnapshot = await getDocs(collection(db, "Equipe"));
 querySnapshot.forEach((doc) => {
   let equipe = document.createElement("li")
   equipe.innertHTML = doc.id
-  documet.getElementById("liste-equipe").appendChild(equipe)
+  document.getElementById("liste-equipe").appendChild(equipe)
 });
 
 
