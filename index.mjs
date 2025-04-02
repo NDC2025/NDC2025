@@ -23,9 +23,15 @@ onAuthStateChanged(auth, (user) => {
 });
 
 document.getElementById("btnconnexion").addEventListener("click", function () {
-  const email = document.getElementById("email").innertHTML
-  const password = document.getElementById("password").innerHTML
-  signInWithEmailAndPassword(auth, email, password).catch((error) => {
-    alert(error.code, error.message)
+  const email = document.getElementById("email").innertHTML;
+  const password = document.getElementById("password").innerHTML;
+  signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+    const user = userCredential.user;
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorCode, errorMessage);
+  });
   })
 })
