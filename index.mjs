@@ -16,14 +16,17 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth()
 const db = getFirestore()
 
+/*
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    //window.location.href = "controle.html";
-    pass
+    window.location.href = "controle.html";
+    
   }
 });
+*/
 
 document.getElementById("btnconnexion").addEventListener("click", function () {
+  console.log("appuie")
   const email = document.getElementById("email").innertHTML;
   const password = document.getElementById("password").innerHTML;
   signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
