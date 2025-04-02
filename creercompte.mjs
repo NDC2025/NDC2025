@@ -17,16 +17,16 @@ const auth = getAuth();
 const db = getFirestore();
 
 document.getElementById("btncreer").addEventListener("click", function () {
-  const nom = document.getElementById("prenom").value
-  const email = document.getElementById("email").value
-  const password = document.getElementById("password").value
-  const classe = document.getElementById("classe").value
+  const nom = document.getElementById("prenom").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const classe = document.getElementById("classe").value;
   createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-    const user = userCredential.user
+    const user = userCredential.user;
   }).catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    alert(errorCode, errorMessage)
+    alert(errorCode, errorMessage);
   })
 
 
