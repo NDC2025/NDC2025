@@ -24,7 +24,6 @@ onAuthStateChanged(auth, (user) => {
 
 
 document.getElementById("btnconnexion").addEventListener("click", function () {
-  console.log("appuie")
   const email = document.getElementById("email").innertHTML;
   const password = document.getElementById("password").innerHTML;
   signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
@@ -34,7 +33,7 @@ document.getElementById("btnconnexion").addEventListener("click", function () {
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    alert(errorCode, errorMessage);
-    console.log(errorMessage);
+    alert(errorCode, errorMessage, );
+    console.log(errorCode, errorMessage, email, password);
   });
 })
