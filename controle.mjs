@@ -17,7 +17,9 @@ const db = getFirestore()
 
 const querySnapshot = await getDocs(collection(db, "Equipe"));
 querySnapshot.forEach((doc) => {
-  console.log(doc.id, " => ", doc.data());
+  let equipe = document.creatElement("li")
+  equipe.innertHTML = doc.id
+  documet.getElementById("liste-equipe").appendChild(equipe)
 });
 
 
