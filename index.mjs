@@ -23,7 +23,7 @@ onAuthStateChanged(auth, (user) => {
     
   }
 });
-*/
+
 
 document.getElementById("btnconnexion").addEventListener("click", function () {
   console.log("appuie")
@@ -40,3 +40,4 @@ document.getElementById("btnconnexion").addEventListener("click", function () {
     console.log(errorMessage);
   });
 })
+*/
