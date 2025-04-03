@@ -34,20 +34,20 @@ document.getElementById("btnconnexion").addEventListener("click", function () {
     const errorMessage = error.message;
     alert(errorCode, errorMessage);
   });
-})
+});
 
 document.getElementById("forgotPassword").addEventListener("click", function () {
   const email = document.getElementById("email").value;
   if (email == null) {
-    alert("Veuillez remplir le champs "Addresse email")
+    alert("Veuillez remplir le champs "Addresse email");
   } else {
     sendPasswordResetEmail(auth, email)
     .then(() => {
-      alert("Email de réinitialisation de mot de passe envoyé !")
+      alert("Email de réinitialisation de mot de passe envoyé !");
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
   }
-})
+});
