@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
 
 
@@ -34,4 +34,20 @@ document.getElementById("btnconnexion").addEventListener("click", function () {
     const errorMessage = error.message;
     alert(errorCode, errorMessage);
   });
+})
+
+document.getElementById("forgotPassword").addEventListener("click", function () {
+  const email = document.getElementById("email").value;
+  if (email == null) {
+    alert("Veuillez remplir le champs "Addresse email")
+  } else {
+    sendPasswordResetEmail(auth, email)
+    .then(() => {
+      alert("Email de réinitialisation de mot de passe envoyé !")
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+  }
 })
