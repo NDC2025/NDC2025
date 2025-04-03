@@ -23,7 +23,9 @@ document.getElementById("btncreer").addEventListener("click", function () {
   const classe = document.getElementById("classe").value;
   createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
     const user = userCredential.user;
-    updateProfile(user, {displayName: prenom, classe: classe, chefEquipe:false}).catch((error) => {
+    updateProfile(user, {displayName: prenom, classe: classe, chefEquipe: null}).then(() => {
+      document.location.href = "ndc2025.github.io/NDC2025/controle.html";
+    }).catch((error) => {
       alert(error.code, error.message)
     });
   }).catch((error) => {
