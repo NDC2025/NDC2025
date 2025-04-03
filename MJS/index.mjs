@@ -39,7 +39,7 @@ document.getElementById("btnconnexion").addEventListener("click", function () {
 document.getElementById("forgotPassword").addEventListener("click", function () {
   const email = document.getElementById("email").value;
   if (email == null) {
-    alert("Veuillez remplir le champs "Addresse email");
+    alert('Veuillez remplir le champs /"Addresse email\"');
   } else {
     sendPasswordResetEmail(auth, email)
     .then(() => {
