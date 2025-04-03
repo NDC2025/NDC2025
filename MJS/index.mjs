@@ -38,7 +38,7 @@ document.getElementById("btnconnexion").addEventListener("click", function () {
 
 document.getElementById("forgotPassword").addEventListener("click", function () {
   const email = document.getElementById("email").value;
-  if (email == undefined) {
+  if (email == <empty string>) {
     alert('Veuillez remplir le champs /"Addresse email\"');
   } else {
     console.log(email)
